@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0">
+    <scr:component enabled="true" name="com.dtv.poc.DAMCreateAssetVersion">
+        <implementation class="com.dtv.poc.DAMCreateAssetVersion"/>
+        <service servicefactory="false">
+            <provide interface="com.day.cq.workflow.exec.WorkflowProcess"/>
+        </service>
+        <property name="process.label" type="String" value="DAM Create Asset Version"/>
+        <property name="service.pid" value="com.dtv.poc.DAMCreateAssetVersion"/>
+        <reference name="jcrResolverFactory" interface="org.apache.sling.jcr.resource.JcrResourceResolverFactory" cardinality="1..1" policy="static" bind="bindJcrResolverFactory" unbind="unbindJcrResolverFactory"/>
+    </scr:component>
+    <scr:component enabled="true" name="com.dtv.poc.ProjectReplicationProcess">
+        <implementation class="com.dtv.poc.ProjectReplicationProcess"/>
+        <service servicefactory="false">
+            <provide interface="com.day.cq.workflow.exec.WorkflowProcess"/>
+        </service>
+        <property name="process.label" type="String" value="Activate Project"/>
+        <property name="service.pid" value="com.dtv.poc.ProjectReplicationProcess"/>
+        <reference name="replicator" interface="com.day.cq.replication.Replicator" cardinality="1..1" policy="static" bind="bindReplicator" unbind="unbindReplicator"/>
+        <reference name="eventAdmin" interface="org.osgi.service.event.EventAdmin" cardinality="1..1" policy="static" bind="bindEventAdmin" unbind="unbindEventAdmin"/>
+    </scr:component>
+    <scr:component enabled="true" name="com.dtv.poc.ProjectRevertProcess">
+        <implementation class="com.dtv.poc.ProjectRevertProcess"/>
+        <service servicefactory="false">
+            <provide interface="com.day.cq.workflow.exec.WorkflowProcess"/>
+        </service>
+        <property name="process.label" type="String" value="Revert Project"/>
+        <property name="service.pid" value="com.dtv.poc.ProjectRevertProcess"/>
+        <reference name="replicator" interface="com.day.cq.replication.Replicator" cardinality="1..1" policy="static" bind="bindReplicator" unbind="unbindReplicator"/>
+        <reference name="eventAdmin" interface="org.osgi.service.event.EventAdmin" cardinality="1..1" policy="static" bind="bindEventAdmin" unbind="unbindEventAdmin"/>
+    </scr:component>
+    <scr:component enabled="true" name="com.dtv.poc.ProjectVersionProcess">
+        <implementation class="com.dtv.poc.ProjectVersionProcess"/>
+        <service servicefactory="false">
+            <provide interface="com.day.cq.workflow.exec.WorkflowProcess"/>
+        </service>
+        <property name="process.label" type="String" value="Version Project"/>
+        <property name="service.pid" value="com.dtv.poc.ProjectVersionProcess"/>
+        <reference name="resolverFactory" interface="org.apache.sling.api.resource.ResourceResolverFactory" cardinality="1..1" policy="static" bind="bindResolverFactory" unbind="unbindResolverFactory"/>
+    </scr:component>
+    <scr:component enabled="true" immediate="true" name="com.dtv.poc.impl.filters.LoggingFilter">
+        <implementation class="com.dtv.poc.impl.filters.LoggingFilter"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Filter"/>
+        </service>
+        <property name="service.ranking" type="Integer" value="-700"/>
+        <property name="sling.filter.scope" value="REQUEST"/>
+        <property name="service.pid" value="com.dtv.poc.impl.filters.LoggingFilter"/>
+    </scr:component>
+    <scr:component enabled="true" name="com.dtv.poc.ProjectAbsoluteTimeAutoAdvancer">
+        <implementation class="com.dtv.poc.ProjectAbsoluteTimeAutoAdvancer"/>
+        <service servicefactory="false">
+            <provide interface="com.day.cq.workflow.exec.WorkflowProcess"/>
+            <provide interface="com.day.cq.workflow.job.AbsoluteTimeoutHandler"/>
+        </service>
+        <property name="service.description" type="String" value="Project Workflow AutoAdvancer"/>
+        <property name="process.label" type="String" value="Project Absolute Time Auto Advancer"/>
+        <property name="service.pid" value="com.dtv.poc.ProjectAbsoluteTimeAutoAdvancer"/>
+    </scr:component>
+</components>

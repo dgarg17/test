@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    defPlaylistPlayerID="3654791765001"
+    defPlaylistPlayerKey="AQ~~,AAADS7v-6iE~,HPURZPqzb6Y3kvekMyE87uaxz1bDJ3Op"
+    defVideoPlayerID="3637665192001"
+    defVideoPlayerKey="AQ~~,AAADS7v-6iE~,HPURZPqzb6aS6ISSp_oq0Vwi_3iBCQoS"
+    previewPlayerListLoc="http://link.brightcove.com/services/player/bcpid3654791765001"
+    previewPlayerLoc="http://link.brightcove.com/services/player/bcpid3637665192001"
+    readtoken="5Fl0WeBJrOq_rFEerW8a0b-Uw3DLYzLAw3z3bCp_84r6Bv9KshPInA.."
+    writetoken=""/>

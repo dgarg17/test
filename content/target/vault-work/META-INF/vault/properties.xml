@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>DTV POC Package</comment>
+<entry key="createdBy">digarg</entry>
+<entry key="name">dtv-poc-content</entry>
+<entry key="created">2016-02-03T22:16:33.744-0800</entry>
+<entry key="groupId">com.dtv</entry>
+<entry key="version">0.0.1-SNAPSHOT</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="group">DTV</entry>
+<entry key="description">Maven Multimodule project for DTV POC.</entry>
+<entry key="artifactId">dtv-poc-content</entry>
+<entry key="path">/etc/packages/DTV/dtv-poc-content.zip</entry>
+</properties>

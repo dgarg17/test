@@ -1,0 +1,10 @@
+com/dtv/poc/impl/projects/ProjectContentExtractor.class
+com/dtv/poc/ProjectRevertProcess.class
+com/dtv/poc/impl/filters/LoggingFilter.class
+com/dtv/poc/ProjectVersionProcess.class
+com/dtv/poc/ProjectReplicationProcess.class
+com/dtv/poc/PageRevisionComparator.class
+com/dtv/poc/package-info.class
+com/dtv/poc/ProjectAbsoluteTimeAutoAdvancer.class
+com/dtv/poc/AssetRevisionComparator.class
+com/dtv/poc/DAMCreateAssetVersion.class

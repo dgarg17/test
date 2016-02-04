@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+        version="2.0">
+
+    <description>A supporting tab library for the MFS WCM Applications</description>
+    <tlib-version>1.0</tlib-version>
+    <short-name>mfs</short-name>
+    <uri>http://www.mfs.com/taglibs/mfs/1.0</uri>
+
+    <function>
+        <name>addHTMLExtension</name>
+        <function-class>com.mfs.poc.tags.Functions</function-class>
+        <function-signature>java.lang.String addHTMLExtension(java.lang.String)</function-signature>
+    </function>
+    
+    <function>
+        <name>getTitle</name>
+        <function-class>com.mfs.poc.tags.Functions</function-class>
+        <function-signature>java.lang.String getTitle(com.day.cq.wcm.api.Page)</function-signature>
+    </function>
+    
+    <function>
+        <name>generatePathURL</name>
+        <function-class>com.mfs.poc.tags.Functions</function-class>
+        <function-signature>java.lang.String generateURL(org.apache.sling.api.resource.ResourceResolver, java.lang.String)</function-signature>
+    </function>
+    
+    <function>
+        <name>generateResourceURL</name>
+        <function-class>com.mfs.poc.tags.Functions</function-class>
+        <function-signature>java.lang.String generateURL(org.apache.sling.api.adapter.Adaptable)</function-signature>
+    </function>
+    
+    <function>
+        <name>getChainSelectValues</name>
+        <function-class>com.mfs.poc.tags.Functions</function-class>
+        <function-signature>java.util.List getChainSelectValues(java.lang.String)</function-signature>
+    </function>    
+</taglib>
